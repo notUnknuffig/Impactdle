@@ -1,0 +1,158 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+:root {
+    --clr-background: #6b6b6bf1;
+    --clr-lighter: #9a9a9af1;
+}
+body::before {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.1), rgba(0,0,0,1));
+}
+
+body {
+    background-color: black;
+    background-position: center 0;
+    background-size: calc(max(100vw,100vh*(1 + 7/9)));
+    background-repeat: no-repeat;
+    background-image: url("misc/Wallpaper.jpg");
+    display: flex;
+    justify-content: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.content {
+    padding-top: 50px;
+    max-width: 2000px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.content h1 {
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.content input {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    margin: 20px;
+    padding: 10px;
+    width: 40%;
+    border: transparent;
+    border-radius: 15px;
+    background-color: var(--clr-lighter);
+}
+
+.content ul {
+    margin: 25px;
+    padding: 0px;
+    list-style: none;
+    max-height: 70vh;
+    overflow-y: scroll;
+    padding-right: 10px;
+}
+
+.content ul::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 3px;
+}
+
+.content ul::-webkit-scrollbar {
+    width: 5px;
+}
+
+.content ul::-webkit-scrollbar-track:hover {
+    background-color: var(--clr-lighter);
+}
+
+.content ul::-webkit-scrollbar-thumb {
+    background-color: var(--clr-background);
+    border-radius: 3px;
+}
+
+.grid:first-child {
+    border-top: 3px solid black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.grid:first-child .grid-item {
+    border-top: none;
+}
+
+.grid:last-child {
+    border-bottom: 3px solid black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.grid:last-child .grid-item {
+    border-bottom: none;
+}
+
+.grid :first-child {
+    border-left: none;
+}
+
+.grid :last-child {
+    border-right: none;
+}
+
+.grid {
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    display: grid;
+    grid-template-columns: 150px 100px 100px 100px 100px 100px 100px 100px;
+    align-items: center;
+}
+
+.grid img {
+    width: 100px;
+}
+
+.grid p {
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-item {
+    position: relative;
+    z-index: -1;
+    background-color: var(--clr-background);
+    border: 2px solid var(--clr-lighter);
+    height: 100%;
+    text-align: center;
+}
+
+.grid-title .grid-item {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.grid-title img {
+    width: 100px;
+}
+
+.correct {
+    background-color: rgba(64, 139, 64,0.9);
+}
+
+.incorrect {
+    background-color: rgba(139, 64, 80,0.9);
+}
