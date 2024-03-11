@@ -134,10 +134,25 @@ body {
 .grid-item {
     position: relative;
     z-index: -1;
-    background-color: var(--clr-background);
-    border: 2px solid var(--clr-lighter);
     height: 100%;
     text-align: center;
+    background-color: var(--clr-background);
+    border: 2px solid var(--clr-lighter);
+}
+
+.grid-item {
+    animation: addToGrid 0.5s ease;
+}
+
+@keyframes addToGrid {
+    0% {
+        border: none;
+        background-color:transparent;
+        scale: 0%;
+    }
+    100% {
+        scale: 100%;
+    }
 }
 
 .grid-title .grid-item {

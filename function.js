@@ -6,7 +6,7 @@ try {
 } catch {
     const characterNames = Object.keys(data);
     const characterList = document.getElementById("characters");
-    characterNames.forEach(char_name => {
+    characterNames.sort().forEach(char_name => {
         var opt_name = document.createElement("option");
         display_name = data[char_name]["name"];
         if(display_name === "Kaedehara Kazuha") {
