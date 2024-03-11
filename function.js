@@ -27,11 +27,11 @@ try {
     select_character = data[characterNames[(Math.floor(Math.random() * characterNames.length))]];
     
     const inputField = document.getElementById("input");
-    inputField.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter') {
+    inputField.addEventListener(('input'), function guess(event) {
+        /*if (event.type === 'keydown' || event.key === 'Enter') {*/
             let input = inputField.value.toLowerCase();
-            const ul = document.getElementById('list');
             if(characterNames.indexOf(input) !== -1) {
+                const ul = document.getElementById('list');
                 inputField.value = "";
                 if(alreadyGuessed.indexOf(input) === -1) {
                     alreadyGuessed.push(input);
@@ -42,7 +42,6 @@ try {
                     name.appendChild(document.createTextNode(data[input]["name"]));
                     if(data[input]["name"] == select_character["name"]) {
                         name.setAttribute("class", "grid-item correct");            
-                        console.log("Won!");
                     }
                     else {
                         name.setAttribute("class", "grid-item incorrect");
@@ -123,12 +122,16 @@ try {
                     atempts += 1;
                     ul.appendChild(li);
                     li.scrollIntoView();
+                    if (data[input]["name"] == select_character["name"]) {
+                        inputField.placeholder = "You Won!";
+                        return inputField.removeEventListener('input', guess);
+                    }
                     inputField.placeholder = "Enter Character Name";
                 }
                 else {
                     inputField.placeholder = "Character Already Guessed!";
                 }
             }
-        }
+        /*}*/
     });
 }
