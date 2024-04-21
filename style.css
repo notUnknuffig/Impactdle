@@ -171,3 +171,16 @@ body {
 .incorrect {
     background-color: rgba(139, 64, 80,0.9);
 }
+
+.link {
+    position: absolute;
+    bottom: 0px;
+    left: 10%;
+    color: white;
+    height: fit-content;
+    text-align: center;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 1);
+}

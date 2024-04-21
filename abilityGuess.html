@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="abilityGuessStyle.css">
     <script src="data.json"></script>
     <title>Impactdle | Abilitys</title>
 </head>
@@ -13,17 +13,30 @@
         <div class="ability-preview">
             <p>Ability Name:</p>
             <p id="ability-name"></p>
-            <p><span id="element-countdown">2</span> Guesses until reveald.</p>
-            <img id="ability-element" src="misc/" alt="Ability Element">
-            <p><span id="img-countdown">5</span> Guesses until reveald.</p>
-            <img id="ability-img" src="Abilitys/" alt="Ability Icon">
-
+            <div class="element-countdown">
+                <p id="element-countdown"><span id="element-countdown-in">3</span> Guesses until reveald.</p>
+                <img id="ability-element" src="misc/" alt="Ability Element">
+            </div>
+            <div class="img-countdown">
+                <p id="img-countdown"><span id="img-countdown-in">6</span> Guesses until reveald.</p>
+                <img id="ability-img" src="Abilitys/" alt="Ability Icon">
+            </div>
+            <input list="characters" id="input" type="text" placeholder="Enter Character Name">
+            <datalist id="characters">
+            </datalist>
         </div>
-        <input list="characters" id="input" type="text" placeholder="Enter Character Name">
-        <datalist id="characters">
-        </datalist>
+        <ul class="list" id="list">
+            <!-- <li class="grid grid-title">
+                <p class="grid-item"></p>
+            </li> -->
+            
+        </ul>
+        <div class="guess-type-buttons" id="guess-type-buttons">
+            <button onclick="abilityTypeGuess()" id="button-skill">Skill</button>
+            <button onclick="abilityTypeGuess()" id="button-ult">Ultimate</button>
+        </div>
     </div>
-    <div class="link"><a href="index.html">Guess the Character</a></div>
+    <div class="link">Check out: <br><a href="index.html">Guess the Character</a></div>
     <script src="abilityGuess.js"></script>
 </body>
 </html>

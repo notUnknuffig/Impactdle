@@ -21,11 +21,15 @@ try {
         else if(display_name === "Sangonomiya Kokomi") {
             display_name = "Kokomi"
         }
+        else if(display_name === "Shikanoin Heizou") {
+            display_name = "Heizou"
+        }
         opt_name.value = display_name;
         characterList.appendChild(opt_name);
     });
-    select_character = data[characterNames[(Math.floor(Math.random() * characterNames.length))]];
     
+    select_character = data[characterNames[(Math.floor(Math.random() * characterNames.length))]];
+
     const inputField = document.getElementById("input");
     inputField.addEventListener(('input'), function guess(event) {
         /*if (event.type === 'keydown' || event.key === 'Enter') {*/
@@ -124,6 +128,12 @@ try {
                     li.scrollIntoView();
                     if (data[input]["name"] == select_character["name"]) {
                         inputField.placeholder = "You Won!";
+                        streak = parseInt(localStorage.getItem("char_streak"))
+                        localStorage.setItem("char_streak", streak + 1)
+                        l_atempts = parseInt(localStorage.getItem("total_char_atempts"))
+                        localStorage.setItem("total_char_atempts", l_atempts + atempts)
+                        const d = new Date()
+                        localStorage.setItem("char_last_date_atempted", d.getDate())
                         return inputField.removeEventListener('input', guess);
                     }
                     inputField.placeholder = "Enter Character Name";
