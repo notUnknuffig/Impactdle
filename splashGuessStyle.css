@@ -42,7 +42,7 @@ body {
     width: 100%;
 }
 
-.content .ability-preview {
+.content .splash-preview {
     margin-top: 50px;
     color: white;
     text-align: center;
@@ -51,6 +51,21 @@ body {
     border: transparent;
     border-radius: 15px;
     background-color: var(--clr-lighter);
+    display: grid;
+    flex-direction: column;
+    justify-items: center;
+}
+
+.content .image {
+    --img-scale: 1;
+    --x-pos: 50; /*40-60*/
+    --y-pos: 50; /*20-90*/
+    margin: 10px;
+    width: 70%;
+    aspect-ratio: 1/1;
+    background-image: url("Splasharts/Yaoyao.png");
+    background-position: calc(var(--x-pos) * 1%) calc(var(--y-pos) * 1%);
+    background-size: calc(var(--img-scale) * 200%);
 }
 
 .content input {
@@ -131,45 +146,4 @@ body {
 
 .incorrect {
     background-color: rgba(139, 64, 80,0.9) !important;
-}
-
-#ability-name {
-    margin: 10px;
-    font-weight: 900;
-    font-size: 20px;
-}
-
-#element-countdown {
-    display: block;
-    
-}
-
-#element-countdown-in {
-    font-weight: 700;
-    text-shadow: 0px 0px 15px white;
-}
-
-#ability-element {
-    display: none;
-}
-
-#img-countdown {
-    display: block;
-}
-
-#img-countdown-in {
-    font-weight: 700;
-    text-shadow: 0px 0px 15px white;
-}
-
-#ability-img {
-    display: none;
-}
-
-#guess-type-buttons {
-    display: none;
-}
-
-#button-skill {
-    border-bottom: 1px solid black;
 }

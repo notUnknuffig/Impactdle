@@ -8,22 +8,7 @@ try {
     const characterList = document.getElementById("characters");
     characterNames.sort().forEach(char_name => {
         var opt_name = document.createElement("option");
-        display_name = data[char_name]["name"];
-        if(display_name === "Kaedehara Kazuha") {
-            display_name = "Kazuha"
-        }
-        else if(display_name === "Kamisato Ayaka") {
-            display_name = "Ayaka"
-        }
-        else if(display_name === "Kamisato Ayato") {
-            display_name = "Ayato"
-        }
-        else if(display_name === "Sangonomiya Kokomi") {
-            display_name = "Kokomi"
-        }
-        else if(display_name === "Shikanoin Heizou") {
-            display_name = "Heizou"
-        }
+        display_name = charNameOptList(data[char_name]["name"]);
         opt_name.value = display_name;
         characterList.appendChild(opt_name);
     });
@@ -39,6 +24,7 @@ try {
                 inputField.value = "";
                 if(alreadyGuessed.indexOf(input) === -1) {
                     alreadyGuessed.push(input);
+                    document.getElementById(charNameOptList(data[input]["name"])).remove();
                     var li = document.createElement("li");
                     li.setAttribute("class", "grid");
     
@@ -144,4 +130,23 @@ try {
             }
         /*}*/
     });
+}
+
+function charNameOptList(display_name) {
+    if(display_name === "Kaedehara Kazuha") {
+        display_name = "Kazuha"
+    }
+    else if(display_name === "Kamisato Ayaka") {
+        display_name = "Ayaka"
+    }
+    else if(display_name === "Kamisato Ayato") {
+        display_name = "Ayato"
+    }
+    else if(display_name === "Sangonomiya Kokomi") {
+        display_name = "Kokomi"
+    }
+    else if(display_name === "Shikanoin Heizou") {
+        display_name = "Heizou"
+    }
+    return display_name;
 }

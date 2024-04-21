@@ -81,6 +81,7 @@ try {
 
                 const ul = document.getElementById('list');
                 alreadyGuessed.push(input);
+                document.getElementById(charNameOptList(data[input]["name"])).remove();
                 var li = document.createElement("li");
                 li.setAttribute("class", "grid");
 
@@ -131,4 +132,23 @@ function abilityTypeGuess() {
         button_skill.setAttribute("class", "incorrect")
         button_ult.setAttribute("class", "correct")
     }
+}
+
+function charNameOptList(display_name) {
+    if(display_name === "Kaedehara Kazuha") {
+        display_name = "Kazuha"
+    }
+    else if(display_name === "Kamisato Ayaka") {
+        display_name = "Ayaka"
+    }
+    else if(display_name === "Kamisato Ayato") {
+        display_name = "Ayato"
+    }
+    else if(display_name === "Sangonomiya Kokomi") {
+        display_name = "Kokomi"
+    }
+    else if(display_name === "Shikanoin Heizou") {
+        display_name = "Heizou"
+    }
+    return display_name;
 }
