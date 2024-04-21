@@ -10,6 +10,7 @@ try {
         var opt_name = document.createElement("option");
         display_name = charNameOptList(data[char_name]["name"]);
         opt_name.value = display_name;
+        opt_name.id = display_name;
         characterList.appendChild(opt_name);
     });
     
