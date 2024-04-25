@@ -47,6 +47,7 @@ try {
                     atempts += 1;
                     if(atempts < 20) splash.style.setProperty('--img-scale', 20 - atempts);
                     ul.appendChild(li);
+                    li.scrollIntoView();
                     if (data[input]["name"] == select_character["name"]) {
                         inputField.placeholder = "You Won!";
                         splash.style.setProperty('--img-scale', 1);
