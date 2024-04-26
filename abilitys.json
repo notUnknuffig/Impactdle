@@ -1,0 +1,329 @@
+abilitys = {
+"dan_heng":[    
+"Cloudlancer Art North Wind",
+"Cloudlancer Art Torrent",
+"Ethereal Dream",
+"Superiority of Reach",
+"Splitting Spearhead"
+],
+"acheron":[
+"Trilateral Wiltcross",
+"Octobolt Flash",
+"Slashed Dream Cries in Red",
+"Atop Rainleaf Hangs Oneness",
+"Quadrivalent Ascendance"
+],
+"march_7th":[
+"Frigid Cold Arrow",
+"The Power of Cuteness",
+"Glacial Cascade",
+"Girl Power",
+"Freezing Beauty"
+],
+"welt":[
+"Gravity Suppression",
+"Edge of the Void",
+"Synthetic Black Hole",
+"Time Distortion",
+"Gravitational Imprisonment"
+],
+"aventurine":[
+"Straight Bet",
+"Cornerstone Deluxe",
+"Roulette Shark",
+"Shot Loaded Right",
+"The Red or the Black"
+],
+"topaz_and_numby":[
+"Deficit...",
+"Difficulty Paying?",
+"Turn a Profit!",
+"Trotter Market!?",
+"Explicit Subsidy"
+],
+"dr_ratio":[
+"Mind is Might",
+"Intellectual Midwifery",
+"Syllogistic Paradox",
+"Cogito, Ergo Sum",
+"Mold of Idolatry"
+],
+"gallagher":[
+"Corkage Fee",
+"Nectar Blitz",
+"Special Brew",
+"Champagne Etiquette",
+"Tipsy Tussle"
+],
+"black_swan":[
+"Percipience, Silent Dawn",
+"Decadence, False Twilight",
+"Bliss of Otherworld's Embrace",
+"Loom of Fate's Caprice",
+"From Façade to Vérité"
+],
+"silver_wolf":[
+"System Warning",
+"Allow Changes?",
+"User Banned",
+"Awaiting System Response...",
+"Force Quit Program"
+],
+"guinaifen":[
+"Standing Ovation",
+"Blazing Welcome",
+"Watch This Showstopper",
+"PatrAeon Benefits",
+"Skill Showcase"
+],
+"kafka":[
+"Midnight Tumult",
+"Caressing Moonlight",
+"Twilight Trill",
+"Gentle but Cruel",
+"Mercy Is Not Forgiveness"
+],
+"blade":[
+"Cloudfencer Art Starshine",
+"Cloudfencer Art Mountainfall",
+"Shape of Taixu Dawn Herald",
+"Dancing Blade",
+"Cloudfencer Art Warcry"
+],
+"bronya":[
+"Windrider Bullet",
+"Combat Redeployment",
+"The Belobog March",
+"Leading the Way",
+"Banner of Command"
+],
+"yanqing":[
+"Frost Thorn",
+"Darting Ironthorn",
+"Amidst the Raining Bliss",
+"One With the Sword",
+"The One True Sword"
+],
+"gepard":[
+"Fist of Conviction",
+"Daunting Smite",
+"Enduring Bulwark",
+"Unyielding Will",
+"Comradery"
+],
+"qingque":[
+"Flower Pick",
+"Cherry on Top!",
+"A Scoop of Moon",
+"A Quartet? Woo-hoo!",
+"Celestial Jade",
+"Game Solitaire"
+],
+"dan_heng_imbibitor_lunae":[
+"Beneficent Lotus",
+"Transcendence",
+"Divine Spear",
+"Fulgurant Leap",
+"Dracore Libre",
+"Azure's Aqua Ablutes All",
+"Righteous Heart",
+"Heaven-Quelling Prismadrakon"
+],
+"pela":[
+"Frost Shot",
+"Frostbite",
+"Zone Suppression",
+"Data Collecting",
+"Preemptive Strike"
+],
+"yukong":[
+"Arrowslinger",
+"Emboldening Salvo",
+"Diving Kestrel",
+"Seven Layers, One Arrow",
+"Chasing the Wind"
+],
+"sparkle":[
+"Monodrama",
+"Dreamdiver",
+"The Hero with a Thousand Faces",
+"Red Herring",
+"Unreliable Narrator"
+],
+"hook":[
+"Hehe! Don't Get Burned!",
+"Hey! Remember Hook?",
+"Boom! Here Comes the Fire!",
+"Ha! Oil to the Flames!",
+"Ack! Look at This Mess!"
+],
+"xueyi":[
+"Mara-Sunder Awl",
+"Iniquity Obliteration",
+"Divine Castigation",
+"Karmic Perpetuation",
+"Summary Execution"
+],
+"argenti":[
+"Fleeting Fragrance",
+"Justice, Hereby Blooms",
+"For In This Garden Supreme Beauty Bestows",
+"Merit Bestowed in 'My' Garden",
+"Sublime Object",
+"Manifesto of Purest Virtue"
+],
+"fu_xuan":[
+"Novaburst",
+"Known by Stars, Shown by Hearts",
+"Woes of Many Morphed to One",
+"Bleak Breeds Bliss",
+"Of Fortune Comes Fate"
+],
+"luka":[
+"Direct Punch",
+"Sky-Shatter Fist",
+"Lacerating Fist",
+"Coup de Grâce",
+"Flying Sparks",
+"Anticipator"
+],
+"serval":[
+"Roaring Thunderclap",
+"Lightning Flash",
+"Here Comes the Mechanical Fever",
+"Galvanic Chords",
+"Good Night, Belobog"
+],
+"natasha":[
+"Behind the Kindness",
+"Love, Heal, and Choose",
+"Gift of Rebirth",
+"Innervation",
+"Hypnosis Research"
+],
+"asta":[
+"Spectrum Beam",
+"Meteor Storm",
+"Astral Blessing",
+"Astrometry",
+"Miracle Flash"
+],
+"himeko":[
+"Sawblade Tuning",
+"Molten Detonation",
+"Heavenly Flare",
+"Victory Rush",
+"Incomplete Combustion"
+],
+"jingliu":[
+"Lucent Moonglow",
+"Moon On Glacial River",
+"Transcendent Flash",
+"Florephemeral Dreamflux",
+"Crescent Transmigration",
+"Shine of Truth"
+],
+"herta":[
+"What Are You Looking At?",
+"One-Time Offer",
+"It's Magic, I Added Some Magic",
+"Fine, I'll Do It Myself",
+"It Can Still Be Optimized"
+],
+"luocha":[
+"Thorns of the Abyss",
+"Prayer of Abyss Flower",
+"Death Wish",
+"Cycle of Life",
+"Mercy of a Fool"
+],
+"sampo":[
+"Dazzling Blades",
+"Ricochet Love",
+"Surprise Present",
+"Windtorn Dagger",
+"Shining Bright"
+],
+"jing_yuan":[
+"Glistening Light",
+"Rifting Zenith",
+"Lightbringer",
+"Prana Extirpated",
+"Spirit Invocation"
+],
+"misha":[
+"E—Excuse Me, Please!",
+"R—Room Service",
+"G—Gonna Be Late!",
+"Horological Escapement",
+"Wait, You Are So Beautiful!"
+],
+"lynx":[
+"Ice Crampon Technique",
+"Salted Camping Cans",
+"Snowfield First Aid",
+"Outdoor Survival Experience",
+"Chocolate Energy Bar"
+],
+"hanya":[
+"Oracle Brush",
+"Samsara, Locked",
+"Ten-Lords' Decree, All Shall Obey",
+"Sanction",
+"Netherworld Judgment"
+],
+"arlan":[
+"Lightning Rush",
+"Shackle Breaker",
+"Frenzied Punishment",
+"Pain and Anger",
+"Swift Harvest"
+],
+"seele":[
+"Thwack",
+"Sheathed Blade",
+"Butterfly Flurry",
+"Resurgence",
+"Phantom Illusion"
+],
+"bailu":[
+"Diagnostic Kick",
+"Singing Among Clouds",
+"Felicitous Thunderleap",
+"Gourdful of Elixir",
+"Saunter in the Rain"
+],
+"tingyun":[
+"Dislodged",
+"Soothing Melody",
+"Amidst the Rejoicing Clouds",
+"Violet Sparknado",
+"Gentle Breeze"
+],
+"ruan_mei":[
+"Threading Fragrance",
+"String Sings Slow Swirls",
+"Petals to Stream, Repose in Dream",
+"Somatotypical Helix",
+"Silken Serenade"
+],
+"clara":[
+"I Want to Help",
+"Svarog Watches Over You",
+"Promise, Not Command",
+"Because We're Family",
+"A Small Price for Victory"
+],
+"huohuo":[
+"Banner: Stormcaller",
+"Talisman: Protection",
+"Tail: Spiritual Domination",
+"Possession: Ethereal Metaflow",
+"Fiend: Impeachment of Evil"],
+"sushang":[
+"Cloudfencer Art Starshine",
+"Cloudfencer Art Mountainfall",
+"Shape of Taixu Dawn Herald",
+"Dancing Blade",
+"Cloudfencer Art Warcry",
+]}

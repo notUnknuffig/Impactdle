@@ -1,7 +1,7 @@
 <h1>Impactdle</h1>
 The Website aims to recreate a wordle like game, but with Genshin Impact Characters. There are currently three game modes: <h3>Characters</h3>
 The Goal is to Guess the name of a randomly selected character with as little attempts as possible. 
-Every time you guess a character, aspects like: Element, Weapon type etc. are shown. 
+Every time you guess a character, aspects like: Element, path type etc. are shown. 
 If an aspect is the same for the selected character and the guessed character it is marked as correct. 
 <h3>Ability</h3>
 The name of an ability is shown, and the player must guess the character that this ability belongs to.

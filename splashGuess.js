@@ -8,30 +8,30 @@ try {
     const characterList = document.getElementById("characters");
     characterNames.sort().forEach(char_name => {
         var opt_name = document.createElement("option");
-        display_name = charNameOptList(data[char_name]["name"]);
+        display_name = data[char_name]["name"];
         opt_name.value = display_name;
-        opt_name.id = display_name;
+        opt_name.id = charDataName(display_name);
         characterList.appendChild(opt_name);
     });
     
     select_character = data[characterNames[(Math.floor(Math.random() * characterNames.length))]];
 
     const splash = document.getElementById('splash-image');
-    splash.style.backgroundImage = "url('Splasharts/"+select_character["name"].replace(/ /g, "_")+".png')";
-    splash.style.setProperty('--x-pos', Math.floor(Math.random()*20)+40);
-    splash.style.setProperty('--y-pos', Math.floor(Math.random()*70)+20);
+    splash.style.backgroundImage = "url('Splasharts/"+charDataName(select_character["name"])+".png')";
+    splash.style.setProperty('--x-pos', Math.floor(Math.random()*50)+25);
+    splash.style.setProperty('--y-pos', Math.floor(Math.random()*50)+25);
     splash.style.setProperty('--img-scale', 20);
 
     const inputField = document.getElementById("input");
     inputField.addEventListener(('input'), function guess(event) {
         /*if (event.type === 'keydown' || event.key === 'Enter') {*/
-            let input = inputField.value.toLowerCase();
+            let input = charDataName(inputField.value.toLowerCase());
             if(characterNames.indexOf(input) !== -1) {
                 const ul = document.getElementById('list');
                 inputField.value = "";
                 if(alreadyGuessed.indexOf(input) === -1) {
                     alreadyGuessed.push(input);
-                    document.getElementById(charNameOptList(data[input]["name"])).remove();
+                    document.getElementById(charDataName(data[input]["name"])).remove();
                     var li = document.createElement("li");
                     li.setAttribute("class", "grid");
     
@@ -45,12 +45,12 @@ try {
                     }
                     li.appendChild(name)
                     atempts += 1;
-                    if(atempts < 20) splash.style.setProperty('--img-scale', 20 - atempts);
+                    if(atempts < 17) splash.style.setProperty('--img-scale', 18 * (0.8 ** atempts));
                     ul.appendChild(li);
                     li.scrollIntoView();
                     if (data[input]["name"] == select_character["name"]) {
                         inputField.placeholder = "You Won!";
-                        splash.style.setProperty('--img-scale', 1);
+                        splash.style.setProperty('--img-scale', 0.5);
                         splash.style.setProperty('--x-pos', 50);
                         splash.style.setProperty('--y-pos', 50);
                         return inputField.removeEventListener('input', guess);
@@ -65,21 +65,10 @@ try {
     });
 }
 
-function charNameOptList(display_name) {
-    if(display_name === "Kaedehara Kazuha") {
-        display_name = "Kazuha"
-    }
-    else if(display_name === "Kamisato Ayaka") {
-        display_name = "Ayaka"
-    }
-    else if(display_name === "Kamisato Ayato") {
-        display_name = "Ayato"
-    }
-    else if(display_name === "Sangonomiya Kokomi") {
-        display_name = "Kokomi"
-    }
-    else if(display_name === "Shikanoin Heizou") {
-        display_name = "Heizou"
-    }
+function charDataName(display_name) {
+    display_name = display_name.toLowerCase()
+    display_name = display_name.replace(".", "")
+    display_name = display_name.replace("• ", "")
+    display_name = display_name.replace(/ /g, "_")
     return display_name;
 }

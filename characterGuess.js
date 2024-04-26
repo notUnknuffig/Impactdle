@@ -8,9 +8,9 @@ try {
     const characterList = document.getElementById("characters");
     characterNames.sort().forEach(char_name => {
         var opt_name = document.createElement("option");
-        display_name = charNameOptList(data[char_name]["name"]);
+        display_name = data[char_name]["name"];
         opt_name.value = display_name;
-        opt_name.id = display_name;
+        opt_name.id = charDataName(display_name);
         characterList.appendChild(opt_name);
     });
     
@@ -19,13 +19,13 @@ try {
     const inputField = document.getElementById("input");
     inputField.addEventListener(('input'), function guess(event) {
         /*if (event.type === 'keydown' || event.key === 'Enter') {*/
-            let input = inputField.value.toLowerCase();
+            let input = charDataName(inputField.value.toLowerCase());
             if(characterNames.indexOf(input) !== -1) {
                 const ul = document.getElementById('list');
                 inputField.value = "";
                 if(alreadyGuessed.indexOf(input) === -1) {
                     alreadyGuessed.push(input);
-                    document.getElementById(charNameOptList(data[input]["name"])).remove();
+                    document.getElementById(charDataName(data[input]["name"])).remove();
                     var li = document.createElement("li");
                     li.setAttribute("class", "grid");
     
@@ -46,8 +46,8 @@ try {
                     else {
                         img.setAttribute("class", "grid-item incorrect"); 
                     }
-                    let img_name = data[input]["name"].replace(/ /g, '_');
-                    img.src = "Avatars/" + img_name + ".png";
+                    let img_name = charDataName(data[input]["name"]);
+                    img.src = "Icons/" + img_name + ".png";
                     li.appendChild(img)
     
                     var gender = document.createElement("p");
@@ -60,25 +60,25 @@ try {
                     }
                     li.appendChild(gender)
 
-                    var vision = document.createElement("img");
-                    if(data[input]["vision"] == select_character["vision"]) {
-                        vision.setAttribute("class", "grid-item correct");            
+                    var element = document.createElement("img");
+                    if(data[input]["element"] == select_character["element"]) {
+                        element.setAttribute("class", "grid-item correct");            
                     }
                     else {
-                        vision.setAttribute("class", "grid-item incorrect"); 
+                        element.setAttribute("class", "grid-item incorrect"); 
                     }
-                    vision.src = "misc/" +  data[input]["vision"] + ".svg";
-                    li.appendChild(vision)
+                    element.src = "misc/" +  data[input]["element"] + ".png";
+                    li.appendChild(element)
     
-                    var weapon = document.createElement("p");
-                    weapon.appendChild(document.createTextNode(data[input]["weapon"]));
-                    if(data[input]["weapon"] == select_character["weapon"]) {
-                        weapon.setAttribute("class", "grid-item correct");            
+                    var path = document.createElement("img");
+                    if(data[input]["path"] == select_character["path"]) {
+                        path.setAttribute("class", "grid-item correct");            
                     }
                     else {
-                        weapon.setAttribute("class", "grid-item incorrect"); 
+                        path.setAttribute("class", "grid-item incorrect"); 
                     }
-                    li.appendChild(weapon)
+                    path.src = "misc/" +  data[input]["path"] + ".png";
+                    li.appendChild(path)
     
                     var rarity = document.createElement("img");
                     rarity.src = "misc/" +  data[input]["rarity"] + ".png";
@@ -89,16 +89,6 @@ try {
                         rarity.setAttribute("class", "grid-item incorrect"); 
                     }
                     li.appendChild(rarity)
-    
-                    var region = document.createElement("p");
-                    region.appendChild(document.createTextNode(data[input]["region"]));
-                    if(data[input]["region"] == select_character["region"]) {
-                        region.setAttribute("class", "grid-item correct");            
-                    }
-                    else {
-                        region.setAttribute("class", "grid-item incorrect"); 
-                    }
-                    li.appendChild(region)
 
                     var version = document.createElement("p");
                     version.appendChild(document.createTextNode(data[input]["release"]));
@@ -133,21 +123,10 @@ try {
     });
 }
 
-function charNameOptList(display_name) {
-    if(display_name === "Kaedehara Kazuha") {
-        display_name = "Kazuha"
-    }
-    else if(display_name === "Kamisato Ayaka") {
-        display_name = "Ayaka"
-    }
-    else if(display_name === "Kamisato Ayato") {
-        display_name = "Ayato"
-    }
-    else if(display_name === "Sangonomiya Kokomi") {
-        display_name = "Kokomi"
-    }
-    else if(display_name === "Shikanoin Heizou") {
-        display_name = "Heizou"
-    }
+function charDataName(display_name) {
+    display_name = display_name.toLowerCase()
+    display_name = display_name.replace(".", "")
+    display_name = display_name.replace("• ", "")
+    display_name = display_name.replace(/ /g, "_")
     return display_name;
 }
