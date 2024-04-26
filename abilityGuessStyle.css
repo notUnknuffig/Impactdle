@@ -99,6 +99,30 @@ body {
     border-radius: 3px;
 }
 
+@keyframes appear {
+    from {
+        opacity: 0%;
+        background-color:transparent;
+        transform: translateY(-30px);
+    }
+    50%{
+        opacity: 50%;
+        background-color:transparent;
+    }
+    80% {
+        opacity: 100%;
+        transform: translateY(0px);
+    }
+    to {
+    }
+}
+
+.content li p{
+    position: relative;
+    animation: appear 1s;
+    padding-block: 5px;
+}
+
 .link {
     position: absolute;
     bottom: 0px;
