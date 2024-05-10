@@ -876,7 +876,7 @@ data = {
         "region": "Fontain",
         "gender": "Female",
         "release": "4.6",
-        "skill": "/",
-        "ult": "/"
+        "skill": "All Is Ash",
+        "ult": "Balemoon Rising"
     }
 }
