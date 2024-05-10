@@ -50,6 +50,7 @@ try {
                     li.scrollIntoView();
                     if (data[input]["name"] == select_character["name"]) {
                         inputField.placeholder = "You Won!";
+                        document.getElementById("win-screen").style.display = 'block';
                         splash.style.setProperty('--img-scale', 1);
                         splash.style.setProperty('--x-pos', 50);
                         splash.style.setProperty('--y-pos', 50);

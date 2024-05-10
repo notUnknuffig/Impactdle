@@ -115,12 +115,7 @@ try {
                     li.scrollIntoView();
                     if (data[input]["name"] == select_character["name"]) {
                         inputField.placeholder = "You Won!";
-                        streak = parseInt(localStorage.getItem("char_streak"))
-                        localStorage.setItem("char_streak", streak + 1)
-                        l_atempts = parseInt(localStorage.getItem("total_char_atempts"))
-                        localStorage.setItem("total_char_atempts", l_atempts + atempts)
-                        const d = new Date()
-                        localStorage.setItem("char_last_date_atempted", d.getDate())
+                        document.getElementById("win-screen").style.display = 'block';
                         return inputField.removeEventListener('input', guess);
                     }
                     inputField.placeholder = "Enter Character Name";

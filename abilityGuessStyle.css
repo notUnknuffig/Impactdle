@@ -136,6 +136,54 @@ body {
     background-color: rgba(0, 0, 0, 1);
 }
 
+.win-screen {
+    top: 30vh;
+    position: fixed;
+    align-self: center;
+    width: fit-content;
+    animation: float-in 1s forwards;
+    display: none;
+}
+
+@keyframes float-in {
+    0% {
+        transform: translateY(-300%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.win-screen .win-grid {
+    display: grid;
+    align-content: center;
+    background-color: #6b6b6bf1;
+    border-radius: 15px;
+}
+
+.win-screen .win-grid h1 {
+    text-align: center;
+    margin: 10px;
+    color: white;
+}
+
+.win-screen .win-grid a {
+    width: 300px;
+    margin: 10px;
+    font-size: 20px;
+    height: 35px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    background-color: #050505a0;
+    border-radius: 15px;
+    transition: background-color, 0.3s;
+}
+
+.win-screen .win-grid a:hover {
+    background-color: #7a7a7aa0;
+}
+
 .element-countdown, .img-countdown {
     display: flex;
     margin-top: 10px;

@@ -98,10 +98,6 @@ try {
                     img.src = img_url
                     img.style.display = 'block'
                     guessTypeButtons.style.display = "block"
-                    streak = parseInt(localStorage.getItem("ability_streak"))
-                    localStorage.setItem("ability_streak", streak + 1)
-                    l_atempts = parseInt(localStorage.getItem("total_ability_atempts"))
-                    localStorage.setItem("total_ability_atempts", l_atempts + atempts)
                 }
             }
         }
@@ -118,6 +114,7 @@ function abilityTypeGuess() {
         button_skill.setAttribute("class", "incorrect")
         button_ult.setAttribute("class", "correct")
     }
+    document.getElementById("win-screen").style.display = 'block';
 }
 
 function charNameOptList(display_name) {
