@@ -861,7 +861,7 @@ data = {
         "name": "Chiori",
         "rarity": "5_star",
         "weapon": "Sword",
-        "vision": "geo",
+        "vision": "Geo",
         "region": "Inazuma",
         "gender": "Female",
         "release": "4.5",
